@@ -1,0 +1,8 @@
+ros-hydro-rviz-imu-plugin (1.0.0-1quantal) quantal; urgency=high
+
+  * First public release
+  * Contributors: Ivan Dryanovski, Martin Günther, Davide Tateo, Francisco Vina, Lorenzo Riano
+
+ -- Ivan Dryanovski <ivan.dryanovski@gmail.com>  Tue, 02 Sep 2014 22:00:00 -0000
+
+

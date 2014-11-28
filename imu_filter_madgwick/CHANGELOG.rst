@@ -17,7 +17,7 @@ Changelog for package imu_filter_madgwick
   bits are read from a 32 bit number. Thanks to @tomas-c for spotting this
   and pointing out the solution.
 * catkinization of imu_tools metapackage
-* fix typo: zeta -> zeta_
+* fix typo: zeta -> ``zeta_``
 * fix initialization of initial rotation
 * gyro drift correction function added in MARG implementation
 * set "zeta" as a parameter for dynamic reconfigure in the .cfg file

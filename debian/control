@@ -1,0 +1,12 @@
+Source: ros-hydro-imu-filter-madgwick
+Section: misc
+Priority: extra
+Maintainer: Martin Günther <martin.guenther1980@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-hydro-catkin, ros-hydro-dynamic-reconfigure, ros-hydro-geometry-msgs, ros-hydro-message-filters, ros-hydro-nodelet, ros-hydro-pluginlib, ros-hydro-roscpp, ros-hydro-sensor-msgs, ros-hydro-tf
+Homepage: http://ros.org/wiki/imu_filter_madgwick
+Standards-Version: 3.9.2
+
+Package: ros-hydro-imu-filter-madgwick
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-dynamic-reconfigure, ros-hydro-geometry-msgs, ros-hydro-message-filters, ros-hydro-nodelet, ros-hydro-pluginlib, ros-hydro-roscpp, ros-hydro-sensor-msgs, ros-hydro-tf
+Description: Filter which fuses angular velocities, accelerations, and (optionally) magnetic readings from a generic IMU device into an orientation. Based on code by Sebastian Madgwick, http://www.x-io.co.uk/node/8#open_source_ahrs_and_imu_algorithms.

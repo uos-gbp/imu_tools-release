@@ -1,0 +1,28 @@
+ros-hydro-imu-tools (1.0.3-0raring) raring; urgency=high
+
+
+
+ -- Martin Günther <martin.guenther1980@gmail.com>  Wed, 28 Jan 2015 23:00:00 -0000
+
+ros-hydro-imu-tools (1.0.2-0raring) raring; urgency=high
+
+
+
+ -- Martin Günther <martin.guenther1980@gmail.com>  Mon, 26 Jan 2015 23:00:00 -0000
+
+ros-hydro-imu-tools (1.0.1-0raring) raring; urgency=high
+
+  * add me as maintainer to package.xml
+  * Contributors: Martin Günther
+
+ -- Martin Günther <martin.guenther1980@gmail.com>  Tue, 09 Dec 2014 23:00:00 -0000
+
+ros-hydro-imu-tools (1.0.0-0raring) raring; urgency=high
+
+  * First public release
+  * catkinization of imu_tools metapackage
+  * Contributors: Francisco Vina
+
+ -- Ivan Dryanovski <ivan.dryanovski@gmail.com>  Tue, 02 Sep 2014 22:00:00 -0000
+
+

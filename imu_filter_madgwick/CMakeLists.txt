@@ -24,7 +24,7 @@ include_directories(
 
 
 # create imu_filter library
-add_library (imu_filter src/imu_filter.cpp  include/imu_filter_madgwick/imu_filter.h)
+add_library (imu_filter src/imu_filter.cpp  src/imu_filter_ros.cpp  include/imu_filter_madgwick/imu_filter.h)
 add_dependencies(imu_filter ${PROJECT_NAME}_gencfg)
 target_link_libraries(imu_filter ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
@@ -43,6 +43,11 @@ install(TARGETS imu_filter imu_filter_nodelet imu_filter_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(DIRECTORY include/${PROJECT_NAME}/
+   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+   FILES_MATCHING PATTERN "*.h"
 )
 
 install(FILES imu_filter_nodelet.xml

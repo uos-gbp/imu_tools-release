@@ -2,6 +2,13 @@
 Changelog for package imu_filter_madgwick
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.6 (2015-10-06)
+------------------
+* Split ImuFilter class into ImuFilter and ImuFilterRos in order to
+  have a C++ API to the Madgwick algorithm
+* Properly install header files.
+* Contributors: Martin Günther, Michael Stoll
+
 1.0.5 (2015-06-24)
 ------------------
 * Add "~use_magnetic_field_msg" param.

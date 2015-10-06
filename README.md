@@ -1,3 +1,28 @@
+## imu_tools (indigo) - 1.0.6-0
+
+The packages in the `imu_tools` repository were released into the `indigo` distro by running `/usr/bin/bloom-release imu_tools --track indigo --rosdistro indigo` on `Tue, 06 Oct 2015 13:50:28 -0000`
+
+These packages were released:
+- `imu_complementary_filter`
+- `imu_filter_madgwick`
+- `imu_tools`
+- `rviz_imu_plugin`
+
+Version of package(s) in repository `imu_tools`:
+- upstream repository: https://github.com/ccny-ros-pkg/imu_tools.git
+- release repository: https://github.com/uos-gbp/imu_tools-release.git
+- rosdistro version: `1.0.5-0`
+- old version: `1.0.5-0`
+- new version: `1.0.6-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.37`
+
+
 ## imu_tools (indigo) - 1.0.5-0
 
 The packages in the `imu_tools` repository were released into the `indigo` distro by running `/usr/bin/bloom-release imu_tools --track indigo --rosdistro indigo` on `Wed, 24 Jun 2015 14:01:53 -0000`

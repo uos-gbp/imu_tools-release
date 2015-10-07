@@ -1,6 +1,6 @@
 <package>
   <name> imu_tools </name>
-  <version>1.0.6</version>
+  <version>1.0.8</version>
   <description>
     Various tools for IMU devices
   </description>
@@ -12,6 +12,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <run_depend>imu_complementary_filter</run_depend>
   <run_depend>imu_filter_madgwick</run_depend>
   <run_depend>rviz_imu_plugin</run_depend>
 

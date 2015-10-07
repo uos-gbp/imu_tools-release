@@ -32,6 +32,7 @@
 #ifndef IMU_TOOLS_COMPLEMENTARY_FILTER_ROS_H
 #define IMU_TOOLS_COMPLEMENTARY_FILTER_ROS_H
 
+#include <sensor_msgs/MagneticField.h>
 #include <geometry_msgs/Vector3Stamped.h>
 #include <message_filters/subscriber.h>
 #include <message_filters/sync_policies/approximate_time.h>
@@ -56,9 +57,9 @@ class ComplementaryFilterROS
 
     // Convenience typedefs
     typedef sensor_msgs::Imu ImuMsg;
-    typedef geometry_msgs::Vector3Stamped MagMsg;
+    typedef sensor_msgs::MagneticField MagMsg;
     typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Imu, 
-        geometry_msgs::Vector3Stamped> MySyncPolicy;
+        MagMsg> MySyncPolicy;
     typedef message_filters::sync_policies::ApproximateTime<ImuMsg, MagMsg> 
         SyncPolicy;
     typedef message_filters::Synchronizer<SyncPolicy> Synchronizer;    
@@ -74,15 +75,16 @@ class ComplementaryFilterROS
     boost::shared_ptr<MagSubscriber> mag_subscriber_;
 
     ros::Publisher imu_publisher_;
-    ros::Publisher roll_publisher_;
-    ros::Publisher pitch_publisher_;
-    ros::Publisher yaw_publisher_;
+    ros::Publisher rpy_publisher_;
     ros::Publisher state_publisher_;
     tf::TransformBroadcaster tf_broadcaster_;
          
     // Parameters:
     bool use_mag_;
+    bool publish_tf_;
+    bool reverse_tf_;
     double constant_dt_;
+    bool publish_debug_topics_;
     std::string fixed_frame_;
 
     // State variables:

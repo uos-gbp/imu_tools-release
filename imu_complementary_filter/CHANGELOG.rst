@@ -2,6 +2,17 @@
 Changelog for package imu_complementary_filter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.8 (2015-10-07)
+------------------
+
+1.0.7 (2015-10-07)
+------------------
+* Allow remapping imu namespace
+* Publish RPY as Vector3Stamped
+* Add params: constant_dt, publish_tf, reverse_tf, publish_debug_topics
+* Use MagneticField instead of Vector3
+* Contributors: Martin Günther
+
 1.0.6 (2015-10-06)
 ------------------
 * Add new package: imu_complementary_filter

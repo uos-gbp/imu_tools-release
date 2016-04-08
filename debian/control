@@ -1,0 +1,12 @@
+Source: ros-jade-imu-tools
+Section: misc
+Priority: extra
+Maintainer: Martin Günther <martin.guenther1980@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin
+Homepage: http://ros.org/wiki/imu_tools
+Standards-Version: 3.9.2
+
+Package: ros-jade-imu-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-imu-complementary-filter, ros-jade-imu-filter-madgwick, ros-jade-rviz-imu-plugin
+Description: Various tools for IMU devices

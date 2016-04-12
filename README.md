@@ -1,3 +1,30 @@
+## imu_tools (kinetic) - 1.0.9-0
+
+The packages in the `imu_tools` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release imu_tools --track kinetic --rosdistro kinetic` on `Tue, 12 Apr 2016 12:03:08 -0000`
+
+These packages were released:
+- `imu_complementary_filter`
+- `imu_filter_madgwick`
+- `imu_tools`
+- `rviz_imu_plugin`
+
+Version of package(s) in repository `imu_tools`:
+
+- upstream repository: https://github.com/ccny-ros-pkg/imu_tools.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.0.9-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.21`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.5`
+- vcstools version: `0.1.38`
+
+
 ## imu_tools (jade) - 1.0.9-0
 
 The packages in the `imu_tools` repository were released into the `jade` distro by running `/usr/bin/bloom-release imu_tools --track jade --rosdistro jade` on `Fri, 08 Apr 2016 12:47:17 -0000`

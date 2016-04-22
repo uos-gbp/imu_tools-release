@@ -2,6 +2,9 @@
 Changelog for package rviz_imu_plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.11 (2016-04-22)
+-------------------
+
 1.0.10 (2016-04-22)
 -------------------
 * Support qt4/qt5 using rviz's exported qt version

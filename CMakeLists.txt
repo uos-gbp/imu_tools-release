@@ -10,10 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf
 )
 
-find_package(Eigen REQUIRED COMPONENTS)
-
 catkin_package(
-  DEPENDS Eigen
   INCLUDE_DIRS include
   LIBRARIES complementary_filter
   CATKIN_DEPENDS message_filters roscpp sensor_msgs std_msgs tf
@@ -22,13 +19,11 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
-  ${Eigen_INCLUDE_DIRS}
 )
 
 ## Declare a cpp library
 add_library(complementary_filter
   src/complementary_filter.cpp
-  src/complementary_filter_node.cpp
   src/complementary_filter_ros.cpp
   include/imu_complementary_filter/complementary_filter.h
   include/imu_complementary_filter/complementary_filter_ros.h
@@ -38,7 +33,7 @@ add_library(complementary_filter
 # create complementary_filter_node executable
 add_executable(complementary_filter_node
   src/complementary_filter_node.cpp)
-target_link_libraries(complementary_filter_node complementary_filter ${catkin_LIBRARIES} ${Eigen_LIBRARIES})
+target_link_libraries(complementary_filter_node complementary_filter ${catkin_LIBRARIES})
 
 install(TARGETS complementary_filter complementary_filter_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}

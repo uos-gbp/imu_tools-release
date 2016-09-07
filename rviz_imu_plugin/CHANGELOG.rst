@@ -2,6 +2,9 @@
 Changelog for package rviz_imu_plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.1.1 (2016-09-07)
+------------------
+
 1.1.0 (2016-04-25)
 ------------------
 * Add qt5 dependencies to rviz_imu_plugin package.xml

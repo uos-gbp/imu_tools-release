@@ -2,13 +2,13 @@
 Changelog for package imu_filter_madgwick
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.0.13 (2016-09-07)
--------------------
+1.1.2 (2016-09-07)
+------------------
 * Add missing dependency on tf2_geometry_msgs
 * Contributors: Martin Guenther
 
-1.0.12 (2016-09-07)
--------------------
+1.1.1 (2016-09-07)
+------------------
 * Add parameter "world_frame": optionally use ENU or NED instead of NWU
   convention (from `#60 <https://github.com/ccny-ros-pkg/imu_tools/issues/60>`_;
   closes `#36 <https://github.com/ccny-ros-pkg/imu_tools/issues/36>`_)
@@ -23,6 +23,14 @@ Changelog for package imu_filter_madgwick
   optimizations to improve readability)
 * Add unit tests
 * Contributors: Martin Guenther, Michael Stoll
+
+1.1.0 (2016-04-25)
+------------------
+
+1.0.11 (2016-04-22)
+-------------------
+* Jade: Change default: use_magnetic_field_msg = true
+* Contributors: Martin Guenther
 
 1.0.10 (2016-04-22)
 -------------------

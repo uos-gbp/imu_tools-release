@@ -1,0 +1,101 @@
+ros-kinetic-imu-complementary-filter (1.1.2-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Tue, 06 Sep 2016 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.1.1-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Tue, 06 Sep 2016 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.1.0-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Sun, 24 Apr 2016 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.11-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Thu, 21 Apr 2016 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.10-0jessie) jessie; urgency=high
+
+  * Remove Eigen dependency
+    Eigen is not actually used anywhere. Thanks @asimay!
+  * Removed main function from shared library
+  * Contributors: Martin Guenther, Matthias Nieuwenhuisen
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Thu, 21 Apr 2016 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.9-0jessie) jessie; urgency=high
+
+  * complementary: Add Eigen dependency
+    Fixes #54 <https://github.com/ccny-ros-pkg/imu_tools/issues/54>.
+  * Contributors: Martin Günther
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Thu, 15 Oct 2015 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.8-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Tue, 06 Oct 2015 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.7-0jessie) jessie; urgency=high
+
+  * Allow remapping imu namespace
+  * Publish RPY as Vector3Stamped
+  * Add params: constant_dt, publish_tf, reverse_tf, publish_debug_topics
+  * Use MagneticField instead of Vector3
+  * Contributors: Martin Günther
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Tue, 06 Oct 2015 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.6-0jessie) jessie; urgency=high
+
+  * Add new package: imu_complementary_filter
+  * Contributors: Roberto G. Valentini, Martin Günther, Michael Görner
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Mon, 05 Oct 2015 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.5-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Tue, 23 Jun 2015 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.4-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Tue, 05 May 2015 22:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.3-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Wed, 28 Jan 2015 23:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.2-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Mon, 26 Jan 2015 23:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.1-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Tue, 09 Dec 2014 23:00:00 -0000
+
+ros-kinetic-imu-complementary-filter (1.0.0-0jessie) jessie; urgency=high
+
+
+
+ -- Roberto G. Valenti <robertogl.valenti@gmail.com>  Thu, 27 Nov 2014 23:00:00 -0000
+
+

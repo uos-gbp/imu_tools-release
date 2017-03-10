@@ -50,8 +50,17 @@ ImuFilterRos::ImuFilterRos(ros::NodeHandle nh, ros::NodeHandle nh_private):
     constant_dt_ = 0.0;
   if (!nh_private_.getParam ("publish_debug_topics", publish_debug_topics_))
     publish_debug_topics_= false;
+
+  // For ROS Jade, make this default to true.
   if (!nh_private_.getParam ("use_magnetic_field_msg", use_magnetic_field_msg_))
-    use_magnetic_field_msg_ = true;
+  {
+      if (use_mag_)
+      {
+          ROS_WARN("Deprecation Warning: The parameter use_magnetic_field_msg was not set, default is 'false'.");
+          ROS_WARN("Starting with ROS Jade, use_magnetic_field_msg will default to 'true'!");
+      }
+      use_magnetic_field_msg_ = false;
+  }
 
   std::string world_frame;
   // Default should become false for next release
@@ -151,7 +160,7 @@ ImuFilterRos::~ImuFilterRos()
 
 void ImuFilterRos::imuCallback(const ImuMsg::ConstPtr& imu_msg_raw)
 {
-  boost::mutex::scoped_lock(mutex_);
+  boost::mutex::scoped_lock lock(mutex_);
 
   const geometry_msgs::Vector3& ang_vel = imu_msg_raw->angular_velocity;
   const geometry_msgs::Vector3& lin_acc = imu_msg_raw->linear_acceleration;
@@ -194,7 +203,7 @@ void ImuFilterRos::imuMagCallback(
   const ImuMsg::ConstPtr& imu_msg_raw,
   const MagMsg::ConstPtr& mag_msg)
 {
-  boost::mutex::scoped_lock(mutex_);
+  boost::mutex::scoped_lock lock(mutex_);
 
   const geometry_msgs::Vector3& ang_vel = imu_msg_raw->angular_velocity;
   const geometry_msgs::Vector3& lin_acc = imu_msg_raw->linear_acceleration;
@@ -339,7 +348,7 @@ void ImuFilterRos::publishRawMsg(const ros::Time& t,
 void ImuFilterRos::reconfigCallback(FilterConfig& config, uint32_t level)
 {
   double gain, zeta;
-  boost::mutex::scoped_lock(mutex_);
+  boost::mutex::scoped_lock lock(mutex_);
   gain = config.gain;
   zeta = config.zeta;
   filter_.setAlgorithmGain(gain);

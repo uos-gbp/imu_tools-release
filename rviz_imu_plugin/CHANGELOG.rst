@@ -2,22 +2,24 @@
 Changelog for package rviz_imu_plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.1.3 (2017-03-10)
-------------------
+1.0.15 (2017-05-22)
+-------------------
+* Add option to display orientation in world frame (`#69 <https://github.com/ccny-ros-pkg/imu_tools/issues/69>`_)
+  Per REP 145 IMU orientation is in the world frame. Rotating the
+  orientation data to transform into the sensor frame results in strange
+  behavior, such as double-rotation of orientation on a robot. Provide an
+  option to display orientation in the world frame, and enable it by
+  default. Continue to translate the position of the data to the sensor
+  frame.
+* Contributors: C. Andy Martin
 
-1.1.2 (2016-09-07)
-------------------
+1.0.14 (2017-03-10)
+-------------------
 
-1.1.1 (2016-09-07)
-------------------
+1.0.13 (2016-09-07)
+-------------------
 
-1.1.0 (2016-04-25)
-------------------
-* Add qt5 dependencies to rviz_imu_plugin package.xml
-  This fixes the compilation errors on Kinetic for Debian Jessie.
-* Contributors: Martin Guenther
-
-1.0.11 (2016-04-22)
+1.0.12 (2016-09-07)
 -------------------
 
 1.0.10 (2016-04-22)

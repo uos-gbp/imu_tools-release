@@ -2,6 +2,9 @@
 Changelog for package imu_complementary_filter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.1.4 (2017-05-22)
+------------------
+
 1.1.3 (2017-03-10)
 ------------------
 * complementary_filter: move const initializations out of header

@@ -1,3 +1,30 @@
+## imu_tools (melodic) - 1.2.0-0
+
+The packages in the `imu_tools` repository were released into the `melodic` distro by running `/usr/bin/bloom-release imu_tools --rosdistro melodic --track melodic --edit` on `Fri, 25 May 2018 15:07:21 -0000`
+
+These packages were released:
+- `imu_complementary_filter`
+- `imu_filter_madgwick`
+- `imu_tools`
+- `rviz_imu_plugin`
+
+Version of package(s) in repository `imu_tools`:
+
+- upstream repository: https://github.com/ccny-ros-pkg/imu_tools.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.2.0-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.4`
+- catkin_pkg version: `0.4.2`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## imu_tools (lunar) - 1.2.0-0
 
 The packages in the `imu_tools` repository were released into the `lunar` distro by running `/usr/bin/bloom-release imu_tools --rosdistro lunar --track lunar` on `Fri, 25 May 2018 15:01:09 -0000`

@@ -50,10 +50,16 @@ ImuFilterRos::ImuFilterRos(ros::NodeHandle nh, ros::NodeHandle nh_private):
     constant_dt_ = 0.0;
   if (!nh_private_.getParam ("publish_debug_topics", publish_debug_topics_))
     publish_debug_topics_= false;
+  if (!nh_private_.getParam ("use_magnetic_field_msg", use_magnetic_field_msg_))
+    use_magnetic_field_msg_ = true;
 
   std::string world_frame;
-  if (!nh_private_.getParam ("world_frame", world_frame))
-    world_frame = "enu";
+  // Default should become false for next release
+  if (!nh_private_.getParam ("world_frame", world_frame)) {
+    world_frame = "nwu";
+    ROS_WARN("Deprecation Warning: The parameter world_frame was not set, default is 'nwu'.");
+    ROS_WARN("Starting with ROS Lunar, world_frame will default to 'enu'!");
+  }
 
   if (world_frame == "ned") {
     world_frame_ = WorldFrame::NED;
@@ -109,8 +115,24 @@ ImuFilterRos::ImuFilterRos(ros::NodeHandle nh, ros::NodeHandle nh_private):
 
   if (use_mag_)
   {
-    mag_subscriber_.reset(new MagSubscriber(
-      nh_, ros::names::resolve("imu") + "/mag", queue_size));
+    if (use_magnetic_field_msg_)
+    {
+      mag_subscriber_.reset(new MagSubscriber(
+        nh_, ros::names::resolve("imu") + "/mag", queue_size));
+    }
+    else
+    {
+      mag_subscriber_.reset(new MagSubscriber(
+        nh_, ros::names::resolve("imu") + "/magnetic_field", queue_size));
+
+      // Initialize the shim to support republishing Vector3Stamped messages from /mag as MagneticField
+      // messages on the /magnetic_field topic.
+      mag_republisher_ = nh_.advertise<MagMsg>(
+        ros::names::resolve("imu") + "/magnetic_field", 5);
+      vector_mag_subscriber_.reset(new MagVectorSubscriber(
+        nh_, ros::names::resolve("imu") + "/mag", queue_size));
+      vector_mag_subscriber_->registerCallback(&ImuFilterRos::imuMagVectorCallback, this);
+    }
 
     sync_.reset(new Synchronizer(
       SyncPolicy(queue_size), *imu_subscriber_, *mag_subscriber_));
@@ -164,7 +186,12 @@ void ImuFilterRos::imuCallback(const ImuMsg::ConstPtr& imu_msg_raw)
   if (constant_dt_ > 0.0)
     dt = constant_dt_;
   else
+  {
     dt = (time - last_time_).toSec();
+    if (time.isZero())
+      ROS_WARN_STREAM_THROTTLE(5.0, "The IMU message time stamp is zero, and the parameter constant_dt is not set!" <<
+                                    " The filter will not update the orientation.");
+  }
 
   last_time_ = time;
 
@@ -229,7 +256,12 @@ void ImuFilterRos::imuMagCallback(
   if (constant_dt_ > 0.0)
     dt = constant_dt_;
   else
+  {
     dt = (time - last_time_).toSec();
+    if (time.isZero())
+      ROS_WARN_STREAM_THROTTLE(5.0, "The IMU message time stamp is zero, and the parameter constant_dt is not set!" <<
+                                    " The filter will not update the orientation.");
+  }
 
   last_time_ = time;
 
@@ -346,6 +378,15 @@ void ImuFilterRos::reconfigCallback(FilterConfig& config, uint32_t level)
   mag_bias_.z = config.mag_bias_z;
   orientation_variance_ = config.orientation_stddev * config.orientation_stddev;
   ROS_INFO("Magnetometer bias values: %f %f %f", mag_bias_.x, mag_bias_.y, mag_bias_.z);
+}
+
+void ImuFilterRos::imuMagVectorCallback(const MagVectorMsg::ConstPtr& mag_vector_msg)
+{
+  MagMsg mag_msg;
+  mag_msg.header = mag_vector_msg->header;
+  mag_msg.magnetic_field = mag_vector_msg->vector;
+  // leaving mag_msg.magnetic_field_covariance set to all zeros (= "covariance unknown")
+  mag_republisher_.publish(mag_msg);
 }
 
 void ImuFilterRos::checkTopicsTimerCallback(const ros::TimerEvent&)

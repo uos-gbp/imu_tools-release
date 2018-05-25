@@ -2,13 +2,21 @@
 Changelog for package imu_filter_madgwick
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.1.6 (2018-05-25)
+1.2.0 (2018-05-25)
 ------------------
 * Remove outdated Makefile
-* update to use non deprecated pluginlib macro (`#77 <https://github.com/ccny-ros-pkg/imu_tools/issues/77>`_)
 * Add warning when IMU time stamp is zero
   Closes `#82 <https://github.com/ccny-ros-pkg/imu_tools/issues/82>`_.
+* update to use non deprecated pluginlib macro (`#77 <https://github.com/ccny-ros-pkg/imu_tools/issues/77>`_)
 * Contributors: Martin Günther, Mikael Arguedas
+
+1.1.5 (2017-05-24)
+------------------
+* Initial release into Lunar
+* Remove support for Vector3 mag messages
+* Change default world_frame = enu
+* Rewrite rosbags: Use MagneticField for magnetometer
+* Contributors: Martin Günther
 
 1.1.4 (2017-05-22)
 ------------------

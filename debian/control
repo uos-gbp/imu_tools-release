@@ -1,0 +1,12 @@
+Source: ros-melodic-rviz-imu-plugin
+Section: misc
+Priority: extra
+Maintainer: Martin Günther <martin.guenther1980@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), qtbase5-dev, ros-melodic-catkin, ros-melodic-roscpp, ros-melodic-rviz
+Homepage: http://ros.org/wiki/rviz_imu_plugin
+Standards-Version: 3.9.2
+
+Package: ros-melodic-rviz-imu-plugin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a, libqt5gui5, libqt5widgets5, ros-melodic-roscpp, ros-melodic-rviz
+Description: RVIZ plugin for IMU visualization

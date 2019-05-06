@@ -2,6 +2,11 @@
 Changelog for package imu_filter_madgwick
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.1 (2019-05-06)
+------------------
+* Skip messages and warn if computeOrientation fails
+* Contributors: Martin Günther
+
 1.2.0 (2018-05-25)
 ------------------
 * Remove outdated Makefile

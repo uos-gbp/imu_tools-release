@@ -2,6 +2,12 @@
 Changelog for package rviz_imu_plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.2 (2020-05-25)
+------------------
+* Export symbols so plugin can load
+* properly show/hide visualization when enabled/disabled
+* Contributors: CCNY Robotics Lab, Lou Amadio, Martin Günther, v4hn
+
 1.2.1 (2019-05-06)
 ------------------
 * Fix includes, typos and log messages

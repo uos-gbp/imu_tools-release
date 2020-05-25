@@ -1,0 +1,12 @@
+Source: ros-kinetic-imu-tools
+Section: misc
+Priority: optional
+Maintainer: Martin Günther <martin.guenther1980@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: http://ros.org/wiki/imu_tools
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-imu-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-imu-complementary-filter, ros-kinetic-imu-filter-madgwick, ros-kinetic-rviz-imu-plugin
+Description: Various tools for IMU devices

@@ -155,9 +155,10 @@ tracks:
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc}
     devel_branch: noetic
+    last_version: 1.2.2
     name: imu_tools
     patches: null
-    release_inc: 0
+    release_inc: '1'
     release_repo_url: git@github.com:uos-gbp/imu_tools-release.git
     release_tag: :{version}
     ros_distro: noetic

@@ -2,6 +2,14 @@
 Changelog for package imu_complementary_filter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.4 (2022-04-12)
+------------------
+* Manually reformat licenses + defines
+* Reformat everything using clang-format
+* Fix package dependencies
+* Fix trailing whitespace
+* Contributors: Martin Günther
+
 1.2.3 (2021-04-09)
 ------------------
 * Fix "non standard content" warning in imu_tools metapackage

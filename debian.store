@@ -1,1 +1,1 @@
-{"trim": "", "base": "21e33e0", "trimbase": "", "parent": "release/noetic/imu_filter_madgwick", "previous": "a3b0642"}
+{"base": "c522c5e5", "parent": "release/noetic/imu_filter_madgwick", "previous": "8257e19a", "trim": "", "trimbase": ""}

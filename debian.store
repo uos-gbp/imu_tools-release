@@ -1,1 +1,1 @@
-{"base": "c6256ead", "parent": "debian/noetic/imu_filter_madgwick", "previous": "cf9696c1", "trim": "", "trimbase": ""}
+{"base": "098061a4", "parent": "debian/noetic/imu_filter_madgwick", "previous": "d97527a7", "trim": "", "trimbase": ""}

@@ -1,0 +1,13 @@
+Source: ros-noetic-imu-complementary-filter
+Section: misc
+Priority: optional
+Maintainer: Roberto G. Valenti <robertogl.valenti@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-cmake-modules, ros-noetic-geometry-msgs, ros-noetic-message-filters, ros-noetic-roscpp, ros-noetic-sensor-msgs, ros-noetic-std-msgs, ros-noetic-tf
+Homepage: http://www.mdpi.com/1424-8220/15/8/19302
+Standards-Version: 3.9.2
+
+Package: ros-noetic-imu-complementary-filter
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-geometry-msgs, ros-noetic-message-filters, ros-noetic-nodelet, ros-noetic-roscpp, ros-noetic-sensor-msgs, ros-noetic-std-msgs, ros-noetic-tf
+Description: Filter which fuses angular velocities, accelerations, and (optionally) magnetic readings from a generic IMU device into a quaternion to represent the orientation of the device wrt the global frame.
+ Based on the algorithm by Roberto G. Valenti etal. described in the paper &quot;Keeping a Good Attitude: A Quaternion-Based Orientation Filter for IMUs and MARGs&quot; available at http://www.mdpi.com/1424-8220/15/8/19302 .

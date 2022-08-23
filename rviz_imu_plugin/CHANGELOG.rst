@@ -2,6 +2,9 @@
 Changelog for package rviz_imu_plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.5 (2022-08-19)
+------------------
+
 1.2.4 (2022-04-12)
 ------------------
 * Reformat everything using clang-format

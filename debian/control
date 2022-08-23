@@ -1,0 +1,13 @@
+Source: ros-noetic-imu-filter-madgwick
+Section: misc
+Priority: optional
+Maintainer: Martin Günther <martin.guenther1980@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-dynamic-reconfigure, ros-noetic-geometry-msgs, ros-noetic-message-filters, ros-noetic-nodelet, ros-noetic-pluginlib, ros-noetic-roscpp, ros-noetic-rosunit <!nocheck>, ros-noetic-sensor-msgs, ros-noetic-tf2, ros-noetic-tf2-geometry-msgs, ros-noetic-tf2-ros
+Homepage: http://ros.org/wiki/imu_filter_madgwick
+Standards-Version: 3.9.2
+
+Package: ros-noetic-imu-filter-madgwick
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-dynamic-reconfigure, ros-noetic-geometry-msgs, ros-noetic-message-filters, ros-noetic-nodelet, ros-noetic-pluginlib, ros-noetic-roscpp, ros-noetic-sensor-msgs, ros-noetic-tf2, ros-noetic-tf2-geometry-msgs, ros-noetic-tf2-ros
+Description: Filter which fuses angular velocities, accelerations, and (optionally) magnetic readings from a generic IMU device into an orientation.
+ Based on code by Sebastian Madgwick, http://www.x-io.co.uk/node/8#open_source_ahrs_and_imu_algorithms.

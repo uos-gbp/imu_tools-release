@@ -1,0 +1,13 @@
+Source: ros-melodic-imu-filter-madgwick
+Section: misc
+Priority: optional
+Maintainer: Martin Günther <martin.guenther1980@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-dynamic-reconfigure, ros-melodic-geometry-msgs, ros-melodic-message-filters, ros-melodic-nodelet, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-rosunit <!nocheck>, ros-melodic-sensor-msgs, ros-melodic-tf2, ros-melodic-tf2-geometry-msgs, ros-melodic-tf2-ros
+Homepage: http://ros.org/wiki/imu_filter_madgwick
+Standards-Version: 3.9.2
+
+Package: ros-melodic-imu-filter-madgwick
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-dynamic-reconfigure, ros-melodic-geometry-msgs, ros-melodic-message-filters, ros-melodic-nodelet, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-tf2, ros-melodic-tf2-geometry-msgs, ros-melodic-tf2-ros
+Description: Filter which fuses angular velocities, accelerations, and (optionally) magnetic readings from a generic IMU device into an orientation.
+ Based on code by Sebastian Madgwick, http://www.x-io.co.uk/node/8#open_source_ahrs_and_imu_algorithms.

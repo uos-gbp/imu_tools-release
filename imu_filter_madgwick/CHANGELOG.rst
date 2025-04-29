@@ -2,6 +2,9 @@
 Changelog for package imu_filter_madgwick
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.7 (2025-04-29)
+------------------
+
 1.2.6 (2024-01-12)
 ------------------
 * Merge pull request `#192 <https://github.com/CCNYRoboticsLab/imu_tools/issues/192>`_ from enwaytech/av/remove_launchers

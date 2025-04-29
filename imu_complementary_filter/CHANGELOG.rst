@@ -2,6 +2,9 @@
 Changelog for package imu_complementary_filter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.2.7 (2025-04-29)
+------------------
+
 1.2.6 (2024-01-12)
 ------------------
 * complementary filter launch: Remove outdated phidgets_imu nodelet
